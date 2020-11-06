@@ -24,14 +24,14 @@
     "npm": ">= 3.0.0"
   },
   "scripts": {
-    "test": "npm run compile && npm run mocha",
+    "test": "npm run compile && npm run coverage",
     "dev": "ts-node-dev --no-notify src/",
     "start": "npm run compile && node lib/",
     "clean": "shx rm -rf test/data/",
+    "coverage": "nyc npm run mocha",
     "mocha": "npm run clean && NODE_ENV=test ts-mocha \"test/**/*.ts\" --recursive --exit",
     "compile": "shx rm -rf lib/ && tsc"
   },
-
   "standard": {
     "env": [
       "mocha"
@@ -58,6 +58,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/compression": "^1.7.0",
     "@types/cors": "^2.8.8",
     "@types/helmet": "^4.0.0",
@@ -70,6 +71,7 @@
     "axios": "^0.21.0",
     "eslint": "^7.12.1",
     "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
     "shx": "^0.3.3",
     "ts-mocha": "^8.0.0",
     "ts-node-dev": "^1.0.0",
