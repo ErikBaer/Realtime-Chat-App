@@ -30,4 +30,4 @@ export default (): Hook => {
 
     return context;
   };
-}
+};

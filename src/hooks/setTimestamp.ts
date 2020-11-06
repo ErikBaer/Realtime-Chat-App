@@ -5,5 +5,5 @@ export const setTimestamp = (name: string) => {
     context.data[name] = new Date();
 
     return context;
-  }
-} 
+  };
+}; 

@@ -13,7 +13,7 @@ const getGravatar = (email: string) => {
   const hash = crypto.createHash('md5').update(email.toLowerCase()).digest('hex');
   // Return the full avatar URL
   return `${gravatarUrl}/${hash}?${query}`;
-}
+};
 
 // A type interface for our user (it does not validate any data)
 interface UserData {

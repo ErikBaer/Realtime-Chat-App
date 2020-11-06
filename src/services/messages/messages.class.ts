@@ -6,4 +6,4 @@ export class Messages extends Service {
   constructor(options: Partial<NedbServiceOptions>, app: Application) {
     super(options);
   }
-};
+}
